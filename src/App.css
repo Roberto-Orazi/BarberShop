@@ -188,14 +188,53 @@ ul li span{
     display: block;
     margin: 0;
 }
+
 .Contacto-Container{
-    height: 100vh;
+    color: #fff;
     background: linear-gradient(rgba(0,1,3,.5), rgba(0,0,0,.7)), url(./Archivos//Imagenes/accesorios3.jpg) ;
     background-size: cover;
     background-position: center center;
-    color: #fff;
-    position: relative;
+    padding: 100px 0;
+    height: 100vh;
 }
+.Contacto-Container .Galeria-Col{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.contacto-row{
+    margin: 0 auto;
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 100px;
+grid-row-gap: 0px;
+}
+ul li{
+    display: flex;
+    flex-direction: column;
+}
+li a i{
+    margin-right: 20px;
+}
+li a{
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+li a:hover{
+    color: #6d6d74;
+}
+a img{
+    width: 200px;
+}
+.fotoperfilcontacto{
+    width: 400px;
+    border: 6px solid white ;
+}
+
 .Nav-Responsive{
     display: none;
 }
