@@ -1,38 +1,228 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #dde1e9;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.logo{
+    width: 200px;
+}
+.Nav-Container{
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #2f283e;
+    background-color: rgba(0,0,0,.7);
+    z-index: 98;
+    padding: 0 20px;
+}
+.Nav-Container .Nav-Row{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 ;
+    color: #fff;
+}
+
+.nav .nav-link{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+   padding: 20px;
+   text-transform: uppercase;
+}
+.nav .nav-link:hover{
+    color: #2e44e8;
+}
+.col .nav-link{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+   padding: 5px;
+}
+.col .nav-link:hover{
+    color: #6d718d;
+}
+
+.Nav-Responsive{
+    font-size: 25px;
+}
+.spantext{
+    color: #6d718d;
+}
+.Inicio-Container{
+    height: 100vh;
+    background: linear-gradient(rgba(0,1,3,.5), rgba(0,0,0,.7)), url(./Archivos//Imagenes/corte4.JPG) ;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+}
+.Inicio-Container .Inicio-Row{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.Inicio-Container .Info-Col{
+    width: fit-content;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.Inicio-Container .Info-Col h2{
+    font-size: 4rem;
+    letter-spacing: 3px;
+}
+.Inicio-Container .Info-Col p{
+    margin: 20px;
+    color: #797e82;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.Inicio-Container .Btn-Inicio{
+    width: 50px;
+    margin: auto;
+    height: 50px;
+    border: 2px solid #6d718d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #6d718d;
+    margin-top: 50px;
+    text-decoration: none;
+}
+.Servicios-Container{
+    height: 100vh;
+    background: linear-gradient(rgba(0,1,3,.5), rgba(0,0,0,.7)), url(./Archivos//Imagenes/herramientas2.JPG) ;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+}
+.Servicios-Container .Servicios-Row{
+    max-width: 1100px;
+    margin: auto;
+}
+.Servicios-Row{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Servicios-Row .Servicios-Col{
+    border-top: 2px solid #797e82;
+    padding: 7px;
+    color: #797e82;
+    margin: 0 20px;
+}
+
+.Titulo-Col{
+    display: flex;
+    align-items: center;
+}
+
+.Titulo-Row{
+    margin-left: 30px;
+}
+.Titulo-Row span{
+    color: #fff;
+}
+.Titulo-Row h2{
+    font-size: 3rem;
+}
+
+.P-Row .P-Nosotros{
+    margin-bottom: 10px;
+    line-height: 25px;
+    
+}
+.P-Row::first-line{
+    font-weight: 600;
+}
+
+
+ul li{
+   margin-bottom: 10px;
+   line-height: 28px;
+}
+ul li span{
+    color: #151623;
+    font-weight: bold;
+}
+.Galeria-Container{
+    color: #fff;
+    background: linear-gradient(rgba(0,14,41,.6), rgba(55, 53, 55, 0.7)), url(./Archivos/Imagenes/fondo2.webp);
+    background-size: cover;
+    background-position: center center;
+    padding: 100px 0;
+    height: 100vh;
+}
+.Galeria-Container .Galeria-Col{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+.Fotos-Col img{
+    width: 300px;
+}
+.Fotos-Row{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.Fotos-Row img{
+    display: block;
+    margin: 0;
+}
+.Contacto-Container{
+    height: 100vh;
+    background: linear-gradient(rgba(0,1,3,.5), rgba(0,0,0,.7)), url(./Archivos//Imagenes/accesorios3.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    position: relative;
+}
+.Nav-Responsive{
+    display: none;
+}
+@media only screen and (max-width:900px){
+  .Nav-Row .nav-link{
+    position: absolute;
+    display: none;
+    transform: translate();
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .Nav-Responsive{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  nav.responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #151623;
+    z-index: 98;
+   
+  }
+  .nav .nav-link{
+    z-index: 99;
+    margin: auto;
   }
 }
