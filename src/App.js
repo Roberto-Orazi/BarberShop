@@ -6,6 +6,7 @@ import Inicio from './Components/Inicio';
 import NavBar from './Components/NavBar';
 import Servicios from './Components/Servicios';
 
+
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
       <Servicios/>
       <Galeria/>
       <Contacto/>
+      
     </div>
   );
 }

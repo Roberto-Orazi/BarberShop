@@ -1,0 +1,102 @@
+<script src="https://cdn01.jotfor.ms/static/prototype.forms.js?3.3.38668" type="text/javascript"></script>
+<script src="https://cdn02.jotfor.ms/static/jotform.forms.js?3.3.38668" type="text/javascript"></script>
+<script src="https://cdn03.jotfor.ms/js/vendor/jquery-1.8.0.min.js?v=3.3.38668" type="text/javascript"></script>
+<script defer src="https://cdn01.jotfor.ms/js/vendor/maskedinput.min.js?v=3.3.38668" type="text/javascript"></script>
+<script defer src="https://cdn02.jotfor.ms/js/vendor/jquery.maskedinput.min.js?v=3.3.38668" type="text/javascript"></script>
+<script type="text/javascript">	JotForm.newDefaultTheme = true;
+	JotForm.extendsNewTheme = false;
+	JotForm.singleProduct = false;
+	JotForm.newPaymentUIForNewCreatedForms = true;
+	JotForm.newPaymentUI = true;
+	JotForm.clearFieldOnHide="disable";
+	JotForm.submitError="jumpToFirstError";
+
+	JotForm.init(function(){
+	/*INIT-START*/
+      JotForm.setPhoneMaskingValidator( 'input_4_full', '(###) ###-####' );
+
+ JotForm.calendarMonths = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+ JotForm.calendarDays = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
+ JotForm.calendarOther = {"today":"Hoy"};
+ var languageOptions = document.querySelectorAll('#langList li'); 
+ for(var langIndex = 0; langIndex < languageOptions.length; langIndex++) { 
+   languageOptions[langIndex].on('click', function(e) { setTimeout(function(){ JotForm.setCalendar("5", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); }, 0); });
+ } 
+ JotForm.onTranslationsFetch(function() { JotForm.setCalendar("5", false, {"days":{"monday":true,"tuesday":true,"wednesday":true,"thursday":true,"friday":true,"saturday":true,"sunday":true},"future":true,"past":true,"custom":false,"ranges":false,"start":"","end":""}); });
+      JotForm.displayLocalTime("input_6_hourSelect", "input_6_minuteSelect","input_6_ampm", "input_6_timeInput", true);
+      JotForm.alterTexts({"ageVerificationError":"Debe ser mayor de {minAge} años para enviar este formulario.","alphabetic":"Este campo solo puede contener letras.","alphanumeric":"Este campo solo puede contener letras y números.","appointmentSelected":"Ha seleccionado {time} el {date}","ccDonationMinLimitError":"La cantidad mínima es {minAmount} {currency}","ccInvalidCVC":"El número CVC no es válido.","ccInvalidExpireDate":"La fecha de expiración no es válida","ccInvalidNumber":"El número de su tarjeta de crédito no es válido.","ccMissingDetails":"Please fill up the credit card details.","ccMissingDonation":"Escriba los valores numéricos de la cantidad a donar.","ccMissingProduct":"Por favor seleccione al menos un producto.","characterLimitError":"Demasiados caracteres. El límite es","characterMinLimitError":"Muy pocos caracteres. El mínimum es","confirmClearForm":"¿Está seguro que desea limpiar el formulario?","confirmEmail":"El correo electrónico no coincide","currency":"Este campo sólo puede contener valores de moneda.","cyrillic":"Este campo solo puede contener caracteres cirílicos.","dateInvalid":"Esta fecha no es valida. El formato de fecha es {format}","dateInvalidSeparate":"Esta fecha no es válida. Ponga una {element} válida","dateLimited":"Esta fecha no está disponible.","disallowDecimals":"Por favor, introduzca un número entero.","dragAndDropFilesHere_infoMessage":"Arrastre y suelte archivos aquí","email":"Introduzca una dirección e-mail válida","fillMask":"El valor de este campo debe llenar la mascara","freeEmailError":"No se permiten cuentas de correo gratuitas","generalError":"Existen errores en el formulario, por favor corríjalos antes de continuar.","generalPageError":"Hay errores en esta página. Por favor, corríjalos antes de continuar.","gradingScoreError":"El puntaje total debería ser sólo &amp;quot;menos que&amp;quot; o &amp;quot;igual que&amp;quot;","incompleteFields":"Existen campos requeridos incompletos. Por favor complételos.","inputCarretErrorA":"La entrada no debe ser inferior al valor mínimo:","inputCarretErrorB":"La entrada debe ser menor al valor:","justSoldOut":"Se acaba de agotar","lessThan":"Su puntuación debería ser menor o igual que","maxDigitsError":"El máximo de dígitos permitido es","maxFileSize_infoMessage":"Máximo tamaño de archivo","maxSelectionsError":"The maximum number of selections allowed is ","minSelectionsError":"El número mínimo de opciones obligatorias es","multipleFileUploads_emptyError":"El archivo {file} está vacío; por favor, seleccione de nuevo los archivos sin él.","multipleFileUploads_fileLimitError":"Solo se permite subir {fileLimit} archivo(s)","multipleFileUploads_minSizeError":"El archivo {file} es demasiado pequeño, el tamaño mínimo es: {minSizeLimit}.","multipleFileUploads_onLeave":"Se están cargando los archivos, si cierra ahora, se cancelará dicha carga.","multipleFileUploads_sizeError":"El archivo {file} es demasiado grande; el tamaño del archivo no debe superar {sizeLimit}.","multipleFileUploads_typeError":"El archivo {file} posee una extensión no permitida. Solo están permitidas las extensiones {extensions}.","multipleFileUploads_uploadFailed":"File upload failed, please remove it and upload the file again.","noSlotsAvailable":"No hay cupos disponibles","notEnoughStock":"No hay suficientes existencias para la selección actual","notEnoughStock_remainedItems":"No hay suficientes existencias para la selección actual (quedan {count} artículos)","noUploadExtensions":"File has no extension file type (e.g. .txt, .png, .jpeg)","numeric":"Este campo sólo admite valores numéricos.","pastDatesDisallowed":"La fecha debe ser futura","pleaseWait":"Por favor, espere ...","required":"Este campo es obligatorio.","requireEveryCell":"Se requieren todas las celdas.","requireEveryRow":"Todas las filas son obligatorias.","requireOne":"Al menos un campo obligatorio.","restrictedDomain":"This domain is not allowed","selectionSoldOut":"Selección agotada","slotUnavailable":"{time} del {date} ha sido tomada. Favor seleccionar otro espacio.","soldOut":"Agotado","subProductItemsLeft":"(quedan {count} productos)","uploadExtensions":"Solo puede subir los siguientes archivos:","uploadFilesize":"Tamaño del archivo no puede ser mayor que:","uploadFilesizemin":"Tamañao de archivo no puede ser menos de:","url":"Este campo solo contiene una URL válida.","validateEmail":"Usted necesita validar este e-mail","wordLimitError":"Demasiadas palabras. El límite es","wordMinLimitError":"Muy pocas palabras. El mínimo es"});
+	/*INIT-END*/
+	});
+
+   JotForm.prepareCalculationsOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},{"description":"","name":"nombre","qid":"3","text":"Nombre","type":"control_fullname"},{"description":"","name":"numeroDe","qid":"4","text":"Numero de telefono","type":"control_phone"},{"description":"","name":"fecha","qid":"5","text":"Fecha","type":"control_datetime"},{"description":"","name":"hora","qid":"6","text":"Hora","type":"control_time"}]);
+   setTimeout(function() {
+JotForm.paymentExtrasOnTheFly([null,null,{"name":"submit2","qid":"2","text":"Enviar","type":"control_button"},{"description":"","name":"nombre","qid":"3","text":"Nombre","type":"control_fullname"},{"description":"","name":"numeroDe","qid":"4","text":"Numero de telefono","type":"control_phone"},{"description":"","name":"fecha","qid":"5","text":"Fecha","type":"control_datetime"},{"description":"","name":"hora","qid":"6","text":"Hora","type":"control_time"}]);}, 20); 
+</script>
+<style type="text/css">@media print{.form-section{display:inline!important}.form-pagebreak{display:none!important}.form-section-closed{height:auto!important}.page-section{position:initial!important}}</style>
+<link type="text/css" rel="stylesheet" href="https://cdn01.jotfor.ms/themes/CSS/5e6b428acc8c4e222d1beb91.css?defaultThemeVersion=dc93ced
+&themeRevisionID=63a2351435646363a50e3ee0"/>
+<link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/payment/payment_styles.css?3.3.38668" />
+<link type="text/css" rel="stylesheet" href="https://cdn03.jotfor.ms/css/styles/payment/payment_feature.css?3.3.38668" />
+<form class="jotform-form" action="https://submit.jotformeu.com/submit/230143949366057/" method="post" name="form_230143949366057" id="230143949366057" accept-charset="utf-8" autocomplete="on"><input type="hidden" name="formID" value="230143949366057" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <style>
+      .form-all:before
+      {
+        background: none;
+      }
+    </style>
+    <ul class="form-section page-section">
+      <li class="form-line" data-type="control_fullname" id="id_3"><label class="form-label form-label-top form-label-auto" id="label_3" for="first_3"> Nombre </label>
+        <div id="cid_3" class="form-input-wide" data-layout="full">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_3" name="q3_nombre[first]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 given-name" size="10" value="" data-component="first" aria-labelledby="label_3 sublabel_3_first" /><label class="form-sub-label" for="first_3" id="sublabel_3_first" style="min-height:13px" aria-hidden="false">Nombre</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_3" name="q3_nombre[last]" class="form-textbox" data-defaultvalue="" autoComplete="section-input_3 family-name" size="15" value="" data-component="last" aria-labelledby="label_3 sublabel_3_last" /><label class="form-sub-label" for="last_3" id="sublabel_3_last" style="min-height:13px" aria-hidden="false">Apellido</label></span></div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_phone" id="id_4"><label class="form-label form-label-top form-label-auto" id="label_4" for="input_4_full"> Número de teléfono </label>
+        <div id="cid_4" class="form-input-wide" data-layout="half"> <span class="form-sub-label-container" style="vertical-align:top"><input type="tel" id="input_4_full" name="q4_numeroDe[full]" data-type="mask-number" class="mask-phone-number form-textbox validate[Fill Mask]" data-defaultvalue="" autoComplete="section-input_4 tel-national" style="width:310px" data-masked="true" value="" placeholder="(000) 000-0000" data-component="phone" aria-labelledby="label_4 sublabel_4_masked" /><label class="form-sub-label" for="input_4_full" id="sublabel_4_masked" style="min-height:13px" aria-hidden="false">Favor ingrese un número de teléfono válido.</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_datetime" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="lite_mode_5"> Fecha </label>
+        <div id="cid_5" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div style="display:none"><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="month_5" name="q5_fecha[month]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_5 off" aria-labelledby="label_5 sublabel_5_month" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="month_5" id="sublabel_5_month" style="min-height:13px" aria-hidden="false">Mes</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="day_5" name="q5_fecha[day]" size="2" data-maxlength="2" data-age="" maxLength="2" value="" autoComplete="section-input_5 off" aria-labelledby="label_5 sublabel_5_day" /><span class="date-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="day_5" id="sublabel_5_day" style="min-height:13px" aria-hidden="false">Día</label></span><span class="form-sub-label-container" style="vertical-align:top"><input type="tel" class="form-textbox validate[limitDate]" id="year_5" name="q5_fecha[year]" size="4" data-maxlength="4" data-age="" maxLength="4" value="" autoComplete="section-input_5 off" aria-labelledby="label_5 sublabel_5_year" /><label class="form-sub-label" for="year_5" id="sublabel_5_year" style="min-height:13px" aria-hidden="false">Año</label></span></div><span class="form-sub-label-container" style="vertical-align:top"><input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_5" size="12" data-maxlength="12" maxLength="12" data-age="" value="" data-format="mmddyyyy" data-seperator="-" placeholder="MM-DD-YYYY" autoComplete="section-input_5 off" aria-labelledby="label_5 sublabel_5_litemode" /><img class=" newDefaultTheme-dateIcon icon-liteMode" alt="Pick a Date" id="input_5_pick" src="https://cdn.jotfor.ms/images/calendar.png" data-component="datetime" aria-hidden="true" data-allow-time="No" data-version="v2" /><label class="form-sub-label" for="lite_mode_5" id="sublabel_5_litemode" style="min-height:13px" aria-hidden="false">Fecha</label></span>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_time" id="id_6"><label class="form-label form-label-top form-label-auto" id="label_6" for="input_6_hourSelect"> Hora </label>
+        <div id="cid_6" class="form-input-wide" data-layout="half">
+          <div data-wrapper-react="true">
+            <div class="time-wrapper"><span class="form-sub-label-container hasAMPM" style="vertical-align:top"><input type="text" class="time-dropdown form-textbox" id="input_6_timeInput" name="q6_hora[timeInput]" placeholder="HH : MM" aria-labelledby="label_6 sublabel_6_hour" data-mask="hh:MM" value="" data-version="v2" /><input type="hidden" class="form-hidden-time" id="input_6_hourSelect" name="q6_hora[hourSelect]" /><input type="hidden" class="form-hidden-time" id="input_6_minuteSelect" name="q6_hora[minuteSelect]" /><label data-seperate-translate="true" class="form-sub-label" for="input_6_timeInput" id="sublabel_6_hour" style="min-height:13px" aria-hidden="false">Hora Minutos</label></span></div>
+            <div class="time-wrapper"><span class="form-sub-label-container" style="vertical-align:top"><select class="time-dropdown form-dropdown" id="input_6_ampm" name="q6_hora[ampm]" data-component="time-ampm" aria-labelledby="label_6 sublabel_6_ampm">
+                  <option selected="" value="AM">AM</option>
+                  <option value="PM">PM</option>
+                </select><label class="form-sub-label" for="input_6_ampm" id="sublabel_6_ampm" style="border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;white-space:nowrap" aria-hidden="false">AM/PM Option</label></span></div>
+          </div>
+        </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_2">
+        <div id="cid_2" class="form-input-wide" data-layout="full">
+          <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><button id="input_2" type="submit" class="form-submit-button submit-button jf-form-buttons jsTest-submitField" data-component="button" data-content="">Enviar</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+  <script>
+    JotForm.showJotFormPowered = "new_footer";
+  </script>
+  <script>
+    JotForm.poweredByText = "Powered by Jotform";
+  </script><input type="hidden" class="simple_spc" id="simple_spc" name="simple_spc" value="230143949366057" />
+  <script type="text/javascript">
+    var all_spc = document.querySelectorAll("form[id='230143949366057'] .si" + "mple" + "_spc");
+    for (var i = 0; i < all_spc.length; i++)
+    {
+      all_spc[i].value = "230143949366057-230143949366057";
+    }
+  </script>
+  <div class="formFooter-heightMask"></div>
+  <div class="formFooter f6 branding21">
+    <div class="formFooter-wrapper formFooter-leftSide"><a href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=230143949366057&utm_content=jotform_logo&utm_campaign=powered_by_jotform_le" target="_blank" class="formFooter-logoLink"><img class="formFooter-logo" src="https://cdn.jotfor.ms/assets/img/logo2021/jotform-logo-white.svg" alt="Jotform Logo" style="height: 44px;"></a></div>
+    <div class="formFooter-wrapper formFooter-rightSide"><span class="formFooter-text">Now create your own Jotform - It's free!</span><a class="formFooter-button" href="https://www.jotform.com/?utm_source=formfooter&utm_medium=banner&utm_term=230143949366057&utm_content=jotform_button&utm_campaign=powered_by_jotform_le" target="_blank">Create your own Jotform</a></div>
+  </div>
+</form><script type="text/javascript">JotForm.ownerView=true;</script><script type="text/javascript">JotForm.forwardToEu=true;</script><script src="https://cdn.jotfor.ms//js/vendor/smoothscroll.min.js?v=3.3.38668"></script>
+<script src="https://cdn.jotfor.ms//js/errorNavigation.js?v=3.3.38668"></script>

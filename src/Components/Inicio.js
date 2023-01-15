@@ -11,7 +11,7 @@ const Inicio = () => {
             <i class="fa-solid fa-circle-chevron-down"></i>
             </a>
             </Col>
-            
+           
         </Row>
     </Container>
     )
