@@ -14,7 +14,7 @@ const Contacto = () => {
           </Col>
           </Row>
           <Row className='contacto-row'>
-            <Col className='contacto-col'>
+            <Col className='col1 contacto-col'>
           <h4>SACA TU TURNO</h4>
           <Row className='form-row'>
             <h5>Nombre</h5>
@@ -57,7 +57,7 @@ const Contacto = () => {
           <button>Enviar</button>
           </Row>
             </Col>
-            <Col className='contacto-col'>
+            <Col className='col2 contacto-col'>
               <ul>
                 <li>
                   <a href="https://www.instagram.com/barberia3.16/" Target="_blank"><i class="fa-brands fa-instagram"></i>BARBERIA3.16</a>
@@ -68,7 +68,7 @@ const Contacto = () => {
                 </li>
               </ul>
             </Col>
-            <Col className='contacto-col'>
+            <Col className='col3 contacto-col'>
               <img className='fotoperfilcontacto' src={perfil}></img>
             </Col>
           </Row>

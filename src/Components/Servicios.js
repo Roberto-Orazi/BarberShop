@@ -25,14 +25,14 @@ const Servicios = () => {
           <Toast.Header>
             <img
               src={tijera}
-              className="rounded me-2"
+              className="imgser rounded me-2"
               alt=""
             /><br/>
             <strong className="me-auto">Este servicio incluye:</strong>
             <br/>
             <small>-Corte de pelo</small>
             <br/>
-            <small>-Afeitada con maquina</small>
+            <small className='small2'>-Afeitada con maquina</small>
           </Toast.Header>
           <Toast.Body></Toast.Body>
         </Toast>
@@ -45,14 +45,14 @@ const Servicios = () => {
           <Toast.Header>
             <img
               src={navaja}
-              className="rounded me-2"
+              className="imgser rounded me-2"
               alt=""
             /><br/>
             <strong className="me-auto">Este servicio incluye:</strong>
             <br/>
             <small>-Corte Clasico</small>
             <br/>
-            <small>-Afeitada Premium</small>
+            <small className='small2'>-Afeitada Premium</small>
           </Toast.Header>
           <Toast.Body></Toast.Body>
         </Toast>
@@ -65,14 +65,14 @@ const Servicios = () => {
           <Toast.Header>
             <img
               src={navajasola}
-              className="navajasola rounded me-2"
+              className="imgser navajasola rounded me-2"
               alt=""
             /><br/>
             <strong className="me-auto">Este servicio incluye:</strong>
             <br/>
             <small>-Afeitado con Navaja</small>
             <br/>
-            <small>-Preparacion facial para afeitar con los mejores productos.</small>
+            <small className='small2'>-Preparacion facial para afeitar con los mejores productos.</small>
           </Toast.Header>
           <Toast.Body></Toast.Body>
         </Toast>
