@@ -261,7 +261,7 @@ ul li span{
     background-size: cover;
     background-position: center center;
     padding: 100px 0;
-    height: 100vh;
+    height: fit-content
 }
 .Galeria-Container .Galeria-Col{
     max-width: 1100px;
@@ -282,7 +282,75 @@ ul li span{
     display: block;
     margin: 0;
 }
+@media (min-width:900px) and (max-width:1050px){
+    .Galeria-Row{
+        margin-left: 30px;
+    }
+    .Fotos-Col img{
 
+        align-items: center;
+        width: 280px;
+        
+    }
+}
+@media (min-width:767px) and (max-width:900px){
+    .Galeria-Row{
+        margin-left: 30px;
+    }
+    .Fotos-Col img{
+
+        align-items: center;
+        width: 230px;
+        
+    }
+}
+@media (min-width:567px) and (max-width:767px){
+    .Galeria-Row{
+        margin-left: 20px;
+    }
+    .Fotos-Col img{
+
+        align-items: center;
+        width: 180px;
+        
+    }
+}
+@media (min-width:450px) and (max-width:500px){
+    .Galeria-Row{
+       
+        margin-left: 30px;
+    }
+    .Fotos-Col img{
+
+        align-items: center;
+        width: 120px;
+        
+    }
+}
+@media (min-width:400px) and (max-width:450px){
+    .Galeria-Row{
+       
+        margin-left: 10px;
+    }
+    .Fotos-Col img{
+
+        align-items: center;
+        width: 120px;
+        
+    }
+}
+@media (min-width:300px) and (max-width:400px){
+    .Galeria-Row{
+       
+        margin-left: -10px;
+    }
+    .Fotos-Col img{
+
+        align-items: center;
+        width: 95px;
+        
+    }
+}
 .Contacto-Container{
     color: #fff;
     background: linear-gradient(rgba(0,1,3,.5), rgba(0,0,0,.7)), url(./Archivos//Imagenes/accesorios3.jpg) ;
